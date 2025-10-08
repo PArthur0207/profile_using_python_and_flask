@@ -1,0 +1,75 @@
+.top-bar {
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(91, 192, 255, 0.1);
+  display: flex;
+  justify-content: flex-start;
+  box-shadow: 0 0 10px #5bc0ff;
+}
+
+.back-btn {
+  text-decoration: none;
+  color: #e0e8ff;
+  background-color: transparent;
+  border: 2px solid var(--blue-light);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #5bc0ff;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
+  box-shadow: var(--blue-glow);
+}
+
+.profile-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  background-color: rgba(91, 192, 255, 0.05);
+  border: 2px solid var(--blue-light);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 0 30px #5bc0ff;
+
+  /* ✅ Center the entire profile section */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid var(--blue-light);
+  box-shadow: var(--blue-glow);
+  margin-bottom: 20px;
+
+  /* ✅ Ensure image is centered */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+  text-align: left; /* Keep info readable while main container is centered */
+}
+
+.left-column,
+.right-column {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* ✅ Center the Back to Home button below profile info */
+.profile-container .back-btn {
+  margin-top: 25px;
+  align-self: center;
+}

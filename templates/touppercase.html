@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Convert to Uppercase</title>
+  <link rel="stylesheet" href="static/css/main.css">
+  <link rel="stylesheet" href="static/css/uppercase.css">
+</head>
+<body>
+  <div class="content uppercase-page">
+    <h1>Convert String to Uppercase</h1>
+
+    <form action="/toUpperCase" method="post" class="uppercase-form">
+      <label for="inputString">Enter a string:</label>
+      <input type="text" id="inputString" name="inputString" class="upper-input">
+      <input type="submit" value="Convert" class="solve-btn">
+    </form>
+
+    {% if result %}
+    <p class="output centered">Converted string: {{ result }}</p>
+    {% endif %}
+
+    <a href="/" class="back-btn">← Back to Home</a>
+  </div>
+</body>
+</html>

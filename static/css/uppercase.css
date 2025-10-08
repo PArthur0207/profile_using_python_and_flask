@@ -1,0 +1,51 @@
+.uppercase-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 160px);
+  padding: 40px;
+}
+
+.uppercase-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input.upper-input {
+  width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid rgba(91,192,255,0.18);
+  background-color: rgba(11,19,43,0.6);
+  color: #e8f6ff;
+  text-align: center;
+}
+
+.output.centered {
+  margin-top: 12px;
+  font-size: 1.15rem;
+  color: #bfe8ff;
+  text-shadow: 0 0 10px rgba(91,192,255,0.18);
+}
+
+/* Back to Home Button for Uppercase Page */
+.uppercase-page .back-btn {
+  margin-top: 20px;
+  text-decoration: none;
+  color: #e0e8ff;
+  background-color: transparent;
+  border: 2px solid var(--blue-light);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #5bc0ff;
+  transition: all 0.3s ease;
+}
+
+.uppercase-page .back-btn:hover {
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
+  box-shadow: var(--blue-glow);
+  transform: scale(1.05);
+}

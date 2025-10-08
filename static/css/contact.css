@@ -1,0 +1,67 @@
+.contact-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: #e0e8ff;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.contact-grid a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 220px;
+  max-width: 320px; /* allows wider boxes for long text */
+  height: auto; /* auto-adjust for multi-line content */
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #e0e8ff;
+  background-color: rgba(91,192,255,0.05);
+  border-radius: 20px;
+  border: 2px solid var(--blue-light);
+  box-shadow: 0 0 15px #5bc0ff, 0 6px 12px rgba(30,96,145,0.2); /* layered effect */
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  text-align: center;
+  padding: 10px 15px;
+  word-wrap: break-word; /* wrap long text */
+  line-height: 1.2;
+}
+
+.contact-grid a:hover {
+  transform: translateY(-5px) scale(1.05);
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
+  box-shadow: 0 0 25px #5bc0ff, 0 12px 20px rgba(30,96,145,0.3); /* enhanced layers on hover */
+}
+
+/* Back to Home button (same style as others) */
+.back-btn {
+  display: inline-block;
+  margin-top: 30px;
+  text-decoration: none;
+  color: #e0e8ff;
+  background-color: #0044aa;
+  padding: 12px 24px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #3388ff, 0 4px 8px rgba(30,96,145,0.3);
+  font-weight: bold;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(91,192,255,0.12);
+}
+
+.back-btn:hover {
+  background-color: #3388ff;
+  color: #e0e8ff;
+  box-shadow: 0 0 20px #66ccff, 0 8px 16px rgba(30,96,145,0.4);
+  transform: translateY(-3px) scale(1.03);
+}

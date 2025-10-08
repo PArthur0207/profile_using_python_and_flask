@@ -1,0 +1,57 @@
+.shape-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 180px);
+  padding: 40px;
+}
+
+.shape-image {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(91,192,255,0.05), rgba(30,96,145,0.03));
+  padding: 18px;
+  border-radius: 12px;
+}
+
+.formula-img {
+  width: 320px;
+  max-width: 90vw;
+  border-radius: 8px;
+  filter: drop-shadow(0 0 18px rgba(91,192,255,0.25));
+}
+
+/* Form styling already exists, ensure solve-btn exists */
+.shape-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* Back button styling for shape pages */
+.shape-page .back-btn {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #e0e8ff;
+  background-color: transparent;
+  border: 2px solid var(--blue-light);
+  padding: 10px 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #5bc0ff;
+  transition: all 0.3s ease;
+}
+
+.shape-page .back-btn:hover {
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
+  box-shadow: var(--blue-glow);
+  transform: scale(1.05);
+}
