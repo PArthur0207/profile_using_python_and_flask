@@ -37,12 +37,14 @@ h3 {
 }
 
 .content {
+  min-height: 100vh; /* make the container fill the screen */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center; /* vertical center */
+  align-items: center;     /* horizontal center */
   text-align: center;
-  padding: 40px;
 }
+
 
 /* Navigation Bar */
 nav {
@@ -101,3 +103,30 @@ footer {
   height: 1px !important;
   overflow: hidden !important;
 }
+
+.solve-btn {
+  background-color: var(--blue-dark);
+  color: #e0e8ff;
+  border: 2px solid var(--blue-light);
+  border-radius: 10px;
+  padding: 12px 28px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #5bc0ff;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.solve-btn:hover {
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
+  transform: scale(1.08);
+  box-shadow: var(--blue-glow);
+}
+
+.solve-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 0 6px #89dcff;
+}
+

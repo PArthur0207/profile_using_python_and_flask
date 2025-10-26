@@ -1,12 +1,13 @@
 .link-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  justify-items: center;
-  margin-top: 60px;
-  max-width: 920px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 70px; /* increased spacing between boxes */
+  place-items: center;
+  margin: 80px auto 0;
+  max-width: 950px;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
 
 .link-grid a {
@@ -14,22 +15,25 @@
   background-color: rgba(91, 192, 255, 0.1);
   border: 2px solid var(--blue-light);
   color: #e0e8ff;
-  padding: 40px 60px;
-  font-size: 1.4em;
+  padding: 25px;
+  font-size: 1.2em;
   font-weight: bold;
   border-radius: 16px;
-  box-shadow: 0 0 15px #5bc0ff, inset 0 0 10px #1e6091;
+  box-shadow: 0 0 12px #5bc0ff, inset 0 0 8px #1e6091;
   transition: all 0.3s ease;
-  width: 220px;
-  height: 120px;
+  width: 100%;
+  max-width: 240px;
+  min-height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .link-grid a:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   background-color: var(--blue-light);
   color: var(--blue-dark);
   box-shadow: var(--blue-glow);
+  z-index: 1;
 }

@@ -1,4 +1,6 @@
 from flask import Flask, render_template, request
+from infix_to_postfix import InfixToPostfix
+converter = InfixToPostfix()
 
 app = Flask(__name__)
 
@@ -46,6 +48,15 @@ def area_of_triangle():
             return render_template("Area of a Triangle.html", result=result)
         except ValueError:
             return render_template("Area of a Triangle.html", result="Invalid Input")
+        
+@app.route('/infixtopostfix', methods = ['GET', 'POST'])
+def infix_to_postfix():
+    result = None
+    if request.method == 'POST':
+        input_string = request.form.get('inputString', '')
+        result = converter.convert(input_string)
+    return render_template("infixtopostfix.html", result=result)
+        
 
 if __name__ == "__main__":
     app.run(debug=True)
