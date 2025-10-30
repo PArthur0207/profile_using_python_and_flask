@@ -13,7 +13,7 @@ def profile():
     return render_template('profile.html')
 
 @app.route('/toUpperCase', methods=['GET', 'POST'])
-def works():
+def uppercase():
     result = None
     if request.method == 'POST':
         input_string = request.form.get('inputString', '')
@@ -23,6 +23,10 @@ def works():
 @app.route('/contact')
 def contact():
     return render_template('contact.html')
+
+@app.route('/work')
+def works():
+    return render_template('works.html')
 
 @app.route('/areaOfcircle', methods = ['GET', 'POST'])
 def area_of_circle():

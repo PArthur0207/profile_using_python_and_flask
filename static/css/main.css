@@ -37,14 +37,12 @@ h3 {
 }
 
 .content {
-  min-height: 100vh; /* make the container fill the screen */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* vertical center */
-  align-items: center;     /* horizontal center */
+  align-items: center;
   text-align: center;
+  padding: 40px;
 }
-
 
 /* Navigation Bar */
 nav {
