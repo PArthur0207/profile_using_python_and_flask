@@ -5,73 +5,60 @@
   --blue-glow: 0 0 10px #5bc0ff, 0 0 20px #89dcff, 0 0 30px #5bc0ff;
 }
 
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #0b132b;
+  background-color: var(--blue-dark);
   color: #e0e8ff;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 
-h1, h2, h3 {
-  text-align: center;
-}
-
-h1 {
-  font-size: 2.5em;
-  color: var(--blue-light);
-  margin-bottom: 0.3em;
-  text-shadow: var(--blue-glow);
-}
-
-h2 {
-  color: #b7dcff;
-  margin-bottom: 1.5em;
-  text-shadow: 0 0 10px #5bc0ff;
-}
-
-h3 {
-  color: #9ed3ff;
-  text-shadow: 0 0 8px #5bc0ff;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 40px;
-}
-
-/* Navigation Bar */
-nav {
+/* Header and Navigation */
+header {
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 15px 50px;
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 50px;
+  align-items: center;
+  background: rgba(44, 71, 153, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  z-index: 999;
+  border-bottom: 2px solid var(--blue-light);
+  box-sizing: border-box;
+}
+
+nav {
+  margin-left: auto;
 }
 
 nav ul {
-  list-style-type: none;
+  list-style: none;
   display: flex;
-  flex-wrap: wrap;
   gap: 20px;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 nav a {
   text-decoration: none;
   background-color: rgba(91, 192, 255, 0.1);
   border: 2px solid var(--blue-light);
-  padding: 15px 30px;
+  padding: 10px 18px;
   border-radius: 12px;
   color: #e0e8ff;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1em;
+  line-height: 1.2em;
   box-shadow: 0 0 10px #5bc0ff;
   transition: all 0.3s ease;
+  white-space: nowrap;
 }
 
 nav a:hover {
@@ -79,6 +66,74 @@ nav a:hover {
   background-color: var(--blue-light);
   color: var(--blue-dark);
   box-shadow: var(--blue-glow);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center; /* Changed from flex-start to center for vertical alignment */
+  padding: 120px 10% 80px;
+  position: relative;
+  min-height: 80vh;
+}
+
+.hero-text {
+  width: 100%;
+  max-width: 500px;
+  z-index: 2;
+}
+
+.hero-text h1 {
+  font-size: 3.2em;
+  margin: 0;
+  color: var(--blue-light);
+}
+
+.hero-text p {
+  margin-top: 20px;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  color: #b7dcff;
+}
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 28px;
+  background-color: var(--blue-dark);
+  border: 2px solid var(--blue-light);
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #5bc0ff;
+  transition: 0.3s ease;
+  color: #e0e8ff;
+  text-decoration: none;
+}
+
+.hero-btn:hover {
+  transform: scale(1.08);
+  background-color: var(--blue-light);
+  color: var(--blue-dark);
+  box-shadow: var(--blue-glow);
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 480px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+
+.hero-img img {
+  width: 100%;
+  border-radius: 10px;
+  filter: drop-shadow(0 0 20px #5bc0ff);
 }
 
 /* Footer */
@@ -93,7 +148,22 @@ footer {
   text-shadow: 0 0 10px #5bc0ff;
 }
 
-/* Utility */
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--blue-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue-light);
+  border-radius: 10px;
+  border: 3px solid var(--blue-dark);
+}
+
+/* Accessibility and Utility */
 .hidden {
   position: absolute !important;
   left: -9999px !important;
@@ -102,6 +172,8 @@ footer {
   overflow: hidden !important;
 }
 
+/* Shared Button Styles */
+.link-grid a,
 .solve-btn {
   background-color: var(--blue-dark);
   color: #e0e8ff;
@@ -113,18 +185,13 @@ footer {
   cursor: pointer;
   box-shadow: 0 0 10px #5bc0ff;
   transition: all 0.3s ease;
-  margin-top: 20px;
+  text-decoration: none;
 }
 
+.link-grid a:hover,
 .solve-btn:hover {
   background-color: var(--blue-light);
   color: var(--blue-dark);
   transform: scale(1.08);
   box-shadow: var(--blue-glow);
 }
-
-.solve-btn:active {
-  transform: scale(0.96);
-  box-shadow: 0 0 6px #89dcff;
-}
-
